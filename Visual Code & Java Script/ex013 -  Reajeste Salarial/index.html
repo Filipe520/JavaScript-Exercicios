@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exeercícios</title>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    Qual é o salário do funcionário? R$ <input type="number" name="salar" id="salar">
+    <input type="button" value="Calcular" onclick="soma()">
+    <p id="res">Resultado...</p>
+    <script>   
+        function soma(){
+            let txt_salar = window.document.getElementById('salar')
+            let res = window.document.getElementById('res')
+    
+            num_salar = Number(txt_salar.value)
+    
+            let calculo = (num_salar * 15) / 100 
+            res.innerText = `Um funcionário que ganhava R$${num_salar} com 15% de aumento, passa a receber R$$${num_salar+calculo}`
+        }
+    </script>
+</body>
+</html>

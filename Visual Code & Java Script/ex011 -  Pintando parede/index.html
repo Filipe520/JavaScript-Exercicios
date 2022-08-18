@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+        article {
+            width: 600px;
+            height: 200px;
+
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.521);
+
+            box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.438);
+
+            margin: 20px auto;
+
+            background-color: rgb(99, 206, 206);
+        }
+
+        h1 {
+            padding-top: 5px;
+
+            color: rgb(73, 76, 83);
+
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.712);
+            text-align: center;
+        }
+
+        section {
+            margin: 10px;
+            color: rgb(37, 37, 37);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: .9em;
+        }
+
+        input {
+            text-align: center;
+            color: rgb(168, 8, 8);
+            margin-top: 2px;
+
+        }
+
+        #alt-java {
+            margin-left: 12px;
+        }
+
+        #somar:hover {
+            transition: .3s;
+            color: rgb(255, 0, 0);
+
+            border: .5px solid white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Pintando Parede</h1>
+            <section>
+                Largura da parede: <input type="number" name="larg-php" id="larg-java"> <br>
+                Altura da parede: <input type="number" name="alt-php" id="alt-java">
+                <input type="button" value="somar" onclick="somar()" id="somar">
+                <hr>
+                <p id="res">Resultado</p>
+            </section>
+        </article>
+    </main>
+
+    <script> 
+            function somar() {
+                let txt_res = window.document.getElementById('res')
+                let txt_larg = window.document.getElementById('larg-java')
+                let txt_alt = window.document.getElementById('alt-java')
+
+                let num_larg = Number(txt_larg.value)
+                let num_alt = Number(txt_alt.value)
+                let soma = num_larg * num_alt
+                let tinta = soma / 2
+
+                txt_res.innerHTML = `Sua parede tem a dimensão de <strong>${num_alt}x${num_larg}</strong> e sua área é de <strong>${soma}</strong>m². <br>`
+
+                txt_res.innerHTML += `Para pintar essa parede, você precisará de <strong>${tinta.toFixed(2)}</strong>L de tinta.`
+
+                txt_res.style.color = 'rgb(37, 37, 37)'
+
+                txt_res.style.textShadow = '.5px .5px .5px white'
+
+                }
+    </script>
+    </script>
+</body>
+</html>

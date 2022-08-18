@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <h1>Desconto de Produtos</h1>
+    Qual é o preço do produto? R$ <input type="number" name="preço" id="preco">
+    <input type="button" value="Calcular" onclick="somar()">
+    <p id="res">Resultado</p>
+
+    <script>
+        function somar() {
+            let txt_preco = window.document.getElementById('preco')
+            let res = window.document.getElementById('res')
+
+            let num_preco = Number(txt_preco.value)
+
+            let desconto = (num_preco * 5) / 100
+
+            res.innerText = `O produto que custava R$${num_preco} na promoção com 5% vai custar R$${num_preco - desconto.toFixed(2)}`
+        }
+        
+    </script>
+</body>
+</html>
