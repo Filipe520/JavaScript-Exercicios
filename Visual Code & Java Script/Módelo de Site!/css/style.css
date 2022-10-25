@@ -1,0 +1,55 @@
+@charset "UTF-8";   /* caso haja erro de acentuação */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(../image/fundo.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.671);  
+}
+
+h1 {
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.945);
+}
+
+section {
+    width: 1000px;
+    height: 670px;
+
+    margin: 10px auto;
+
+    border-radius: 0px 100px 0px 100px;
+
+    background-color: rgba(74, 150, 194, 0.712);
+
+    color: white;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    margin-top: 25px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.705);
+
+    text-align: center;
+
+    font-size: 1.2em;
+
+    font-style: italic;
+}
